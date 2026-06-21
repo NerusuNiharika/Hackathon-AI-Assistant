@@ -1,0 +1,5 @@
+https://firebase.google.com/docs
+https://huggingface.co/docs
+https://developers.google.com/maps/documentation
+https://docs.aws.amazon.com
+https://platform.openai.com/docs
