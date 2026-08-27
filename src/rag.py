@@ -36,7 +36,22 @@ Question:
 
 def ask_rag(question):
 
-    docs = retriever.invoke(question)
+    # docs = retriever.invoke(question)
+    # Generate hypothetical answer
+
+    hyde_prompt = f"""
+    Write a detailed answer for:
+
+    {question}
+    """
+
+    hypothetical_doc = llm.invoke(hyde_prompt)
+
+# Search using hypothetical answer
+
+    docs = retriever.invoke(
+        hypothetical_doc.content
+    )
 
     context = "\n\n".join(
         doc.page_content for doc in docs
