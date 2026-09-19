@@ -8,9 +8,6 @@
 
 🔗 **[Hackathon AI Assistant – Live Demo](https://hackathon-ai-assistant-icgj4dh8eywwwpdmswxueq.streamlit.app/)**
 
-Try the deployed application here:
-**https://hackathon-ai-assistant-icgj4dh8eywwwpdmswxueq.streamlit.app/**
-
 <p>
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge\&logo=python)
