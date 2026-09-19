@@ -38,7 +38,7 @@ retriever = vector_store.as_retriever(
 # ============================================================
 
 llm = ChatGroq(
-    model="llama-3.1-8b-instant",
+    model="openai/gpt-oss-20b",
     groq_api_key=GROQ_API_KEY,
     temperature=0
 )
