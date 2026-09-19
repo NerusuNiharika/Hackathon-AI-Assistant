@@ -4,6 +4,13 @@
 
 ### *An AI-powered hackathon planning assistant that transforms project ideas into structured plans using Retrieval-Augmented Generation, semantic search, and Large Language Models.*
 
+### 🚀 Live Demo
+
+🔗 **[Hackathon AI Assistant – Live Demo](https://hackathon-ai-assistant-icgj4dh8eywwwpdmswxueq.streamlit.app/)**
+
+Try the deployed application here:
+**https://hackathon-ai-assistant-icgj4dh8eywwwpdmswxueq.streamlit.app/**
+
 <p>
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge\&logo=python)
