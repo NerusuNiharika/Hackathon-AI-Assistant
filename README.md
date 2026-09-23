@@ -10,12 +10,12 @@
 
 <p>
 
-![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge\&logo=python)
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python)
 ![LangChain](https://img.shields.io/badge/LangChain-Framework-success?style=for-the-badge)
 ![Qdrant](https://img.shields.io/badge/Qdrant-VectorDB-red?style=for-the-badge)
-![Gemini](https://img.shields.io/badge/Google%20Gemini-AI-orange?style=for-the-badge\&logo=google)
-![Streamlit](https://img.shields.io/badge/Streamlit-Application-FF4B4B?style=for-the-badge\&logo=streamlit)
-![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Embeddings-yellow?style=for-the-badge\&logo=huggingface)
+![Groq](https://img.shields.io/badge/Groq-LLM-orange?style=for-the-badge)
+![Streamlit](https://img.shields.io/badge/Streamlit-Application-FF4B4B?style=for-the-badge&logo=streamlit)
+![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Embeddings-yellow?style=for-the-badge&logo=huggingface)
 
 </p>
 
@@ -31,7 +31,7 @@ The application combines **Retrieval-Augmented Generation (RAG)**, semantic vect
 
 The platform helps teams with **project ideation, technology selection, architecture planning, development roadmaps, elevator pitches, judge preparation, and knowledge-based question answering**.
 
-By combining a curated knowledge base of problem statements and winning projects with semantic retrieval and Gemini-powered generation, the system provides more context-aware and relevant recommendations.
+By combining a curated knowledge base of problem statements and winning projects with semantic retrieval and Groq-powered generation, the system provides more context-aware and relevant recommendations.
 
 ---
 
@@ -116,7 +116,7 @@ Use semantic search and retrieved knowledge to provide context-aware answers fro
 
 The application follows a RAG-based architecture where knowledge sources are processed, converted into vector embeddings, and stored in Qdrant.
 
-When a user requests information, the system retrieves semantically relevant context from the vector database and provides that context to Google Gemini for generating the final response.
+When a user requests information, the system retrieves semantically relevant context from the vector database and provides that context to **Groq-powered Large Language Models** for generating the final response.
 
 The Streamlit interface acts as the interaction layer through which users access the different hackathon assistance features.
 
@@ -136,7 +136,7 @@ The knowledge retrieval pipeline follows these steps:
 4. 🗄️ Store embeddings in Qdrant.
 5. 🔍 Retrieve semantically relevant documents based on the user's query.
 6. 📚 Combine retrieved context with the user's request.
-7. 🤖 Send the contextual prompt to Google Gemini.
+7. 🤖 Send the contextual prompt to the **Groq LLM**.
 8. 💡 Generate a context-aware response.
 9. 🖥️ Display the result through the Streamlit interface.
 
@@ -172,17 +172,17 @@ This allows teams to move from an initial idea to a structured and presentation-
 
 # 🛠️ Tech Stack
 
-| Category                 | Technologies                                     |
+| Category | Technologies |
 | ------------------------ | ------------------------------------------------ |
-| **Programming Language** | Python                                           |
-| **AI Framework**         | LangChain                                        |
-| **LLM**                  | Google Gemini                                    |
-| **Embeddings**           | Hugging Face Embeddings                          |
-| **Vector Database**      | Qdrant                                           |
-| **RAG**                  | Retrieval-Augmented Generation                   |
-| **Frontend / UI**        | Streamlit                                        |
-| **Containerization**     | Docker                                           |
-| **Knowledge Sources**    | PDFs, URLs, Problem Statements, Winning Projects |
+| **Programming Language** | Python |
+| **AI Framework** | LangChain |
+| **LLM** | Groq |
+| **Embeddings** | Hugging Face Embeddings |
+| **Vector Database** | Qdrant |
+| **RAG** | Retrieval-Augmented Generation |
+| **Frontend / UI** | Streamlit |
+| **Containerization** | Docker |
+| **Knowledge Sources** | PDFs, URLs, Problem Statements, Winning Projects |
 
 ---
 
@@ -279,7 +279,8 @@ Hackathon-AI-Assistant/
 │
 ├── src/
 │   ├── config.py
-│   ├── rag.py
+|   ├── ingest.py
+│   └── rag.py
 │   └── features.py
 │
 ├── data/
@@ -348,21 +349,21 @@ The process can be summarized as:
 
 ```text
 Knowledge Sources
-       ↓
+      ↓
 Document Processing
-       ↓
+      ↓
 Text Chunking
-       ↓
+      ↓
 Embedding Generation
-       ↓
+      ↓
 Qdrant Vector Storage
-       ↓
+      ↓
 Semantic Retrieval
-       ↓
+      ↓
 Relevant Context
-       ↓
-Google Gemini
-       ↓
+      ↓
+Groq LLM
+      ↓
 Generated Response
 ```
 
